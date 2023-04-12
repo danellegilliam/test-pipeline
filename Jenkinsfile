@@ -1,19 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage("Build") {
+        stage("Init") {
             steps {
-                echo "Stage: Build"
-            }
-        }
-        stage("Test") {
-            steps {
-                echo "Stage: Test"
-            }
-        }
-        stage("Deploy") {
-            steps {
-                echo "Stage: Deploy"
+                sh "ls -ltr"
             }
         }
     }
