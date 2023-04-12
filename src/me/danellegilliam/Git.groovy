@@ -1,10 +1,10 @@
 package me.danellegilliam
 
 class Git {
-    def httpCheckout(String branch, String credential, String repo) {
+    def httpCheckout(Map gitParams) {
         checkout scmGit(
-            branches: [[name: "${branch}"]],
-            userRemoteConfigs: [[credentialsId: "${credential}",
-            url: "https://github.com/${repo}"]])              
+            branches: [[name: "${gitParams.branch}"]],
+            userRemoteConfigs: [[credentialsId: "${gitParams.credential}",
+            url: "https://github.com/${gitParams.repo}"]])              
     }
 }
