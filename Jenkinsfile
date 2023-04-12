@@ -1,4 +1,5 @@
 @Library('shared_library') _
+import me.danellegilliam.*
 
 pipeline {
     agent any
