@@ -7,7 +7,7 @@ pipeline {
         stage("Init") {
             steps {
                 script {
-                    def git = new Git(credential = "github", repo = "danellegilliam/test-pipeline.git")
+                    def git = new Git(credential: "github", repo: "danellegilliam/test-pipeline.git")
                 }
             }
         }
